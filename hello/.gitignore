@@ -1,0 +1,9 @@
+/_build
+/deps
+/doc
+/tmp
+/assets/node_modules
+
+/node_modules
+
+/erl_crash.dump

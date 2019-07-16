@@ -1,9 +1,0 @@
-/hello/_build
-/hello/deps
-/hello/doc
-/hello/tmp
-/hello/assets/node_modules
-
-/hello/node_modules
-
-/hello/erl_crash.dump

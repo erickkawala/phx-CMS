@@ -1,0 +1,14 @@
+Phoenix.Template.UndefinedError exception View Source
+Exception raised when a template cannot be found.
+
+Link to this section Summary
+Functions
+message(exception)
+Callback implementation for Exception.message/1.
+
+Link to this section Functions
+Link to this function
+message(exception) View Source
+Callback implementation for Exception.message/1.
+
+

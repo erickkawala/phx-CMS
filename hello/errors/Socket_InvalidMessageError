@@ -1,0 +1,4 @@
+Phoenix.Socket.InvalidMessageError exception View Source
+Raised when the socket message is invalid.
+
+

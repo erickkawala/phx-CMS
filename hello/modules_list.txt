@@ -1,0 +1,24 @@
+https://hexdocs.pm/phoenix/Phoenix.html#content
+
+Phoenix View Source
+This is the documentation for the Phoenix project.
+
+By default, Phoenix applications depend on the following packages:
+
+Ecto - a language integrated query and database wrapper
+
+Phoenix - the Phoenix web framework (these docs)
+
+Phoenix.js - Phoenix Channels JavaScript client
+
+Phoenix PubSub - a distributed pub/sub system with presence support
+
+Phoenix HTML - conveniences for working with HTML in Phoenix
+
+Plug - a specification and conveniences for composable modules in between web applications
+
+Gettext - Internationalization and localization through gettext
+
+There are also optional packages depending on your configuration:
+
+Phoenix PubSub Redis - use Redis to power the Phoenix PubSub system

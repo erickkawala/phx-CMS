@@ -1,2 +1,10 @@
 in iex shell, created map with params for Joe Example and key value pair previously undefined. added changeset, valid because random_key not validated.
 
+added validation :bio, min length 2
+added validation :bio, max length 14
+added validation email regex contains @
+
+add validations: bio min:2, max:140, email regex "@"
+
+  
+  

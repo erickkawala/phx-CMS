@@ -1,0 +1,2 @@
+in iex shell, created map with params for Joe Example and key value pair previously undefined. added changeset, valid because random_key not validated.
+

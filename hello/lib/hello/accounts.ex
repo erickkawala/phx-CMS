@@ -7,7 +7,6 @@ defmodule Hello.Accounts do
   alias Hello.Repo
 
   alias Hello.Accounts.{User, Credential}
-
   @doc """
   Returns the list of users.
 

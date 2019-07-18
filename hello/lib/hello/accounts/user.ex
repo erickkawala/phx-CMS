@@ -10,6 +10,7 @@ defmodule Hello.Accounts.User do
   end
 
   @doc false
+  # ^^ means not available to the public API
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:name, :username])

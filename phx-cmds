@@ -1,7 +1,0 @@
-createuser --interactive --pwprompt
-
-0:hello ericky$ createdb hello_dev
-
-0:hello ericky$ mix phx.server
-
-sudo psql -u postgresql

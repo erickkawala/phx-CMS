@@ -11,6 +11,11 @@
     <strong>Username:</strong>
     <%= @user.username %>
   </li>
+  
+  <li>
+    <strong>Email:</strong>
+    <%= @user.credential.email %>
+  </li>
 
 </ul>
 

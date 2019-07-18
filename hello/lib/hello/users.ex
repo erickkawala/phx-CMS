@@ -1,5 +1,6 @@
 defmodule Hello.Users do
 
+  # alias Hello.Accounts.User
   alias Hello.Repo
   alias Hello.User
 
@@ -9,7 +10,7 @@ defmodule Hello.Users do
   
   def update_user(user, attrs) do
     user
-    |> User.changeset(attrs)
+    |> Hello.Accounts.User.changeset(attrs)
     |> Repo.update()
   end
 end

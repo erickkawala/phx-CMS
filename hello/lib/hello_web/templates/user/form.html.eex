@@ -20,7 +20,7 @@
       <%= error_tag cf, :email %>
     <% end %>
   </div>
-
+  
   <div>
     <%= submit "Save" %>
   </div>

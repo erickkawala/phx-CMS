@@ -18,8 +18,8 @@
       <td><%= page.views %></td>
 
       <td>
-        <%= link "Show", to: Routes.cms_page_path(@conn, :show, page) %>
-        <%= link "Edit", to: Routes.cms_page_path(@conn, :edit, page) %>
+        <%= link "Show", to: Routes.cms_page_path(@conn, :show, page) %> | 
+        <%= link "Edit", to: Routes.cms_page_path(@conn, :edit, page) %> | 
         <%= link "Delete", to: Routes.cms_page_path(@conn, :delete, page), method: :delete, data: [confirm: "Are you sure?"] %>
       </td>
     </tr>

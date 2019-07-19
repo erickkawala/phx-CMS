@@ -20,3 +20,13 @@ defmodule Hello.Accounts.User do
     |> unique_constraint(:username)
   end
 end
+
+#   def changeset(user, params \\ %{}) do
+#     user
+#     |> cast(params, [:name, :email, :password_hash])
+#     |> validate_required([:name, :email])
+#     |> validate_format(:email, ~r/@/)
+#     |> validate_inclusion(:age, 18..100)
+#     |> unique_constraint(:email)
+#   end
+# end

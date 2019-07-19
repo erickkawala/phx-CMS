@@ -22,8 +22,6 @@ defmodule HelloWeb.Router do
     
     get "/", HelloController, :index
     get "/hello/:messenger", HelloController, :show
-
-    
   end
 
   defp authenticate_user(conn, _) do
@@ -42,7 +40,21 @@ defmodule HelloWeb.Router do
       pipe_through [:browser, :authenticate_user]
       resources "/pages", PageController
   end
+  defmodule NoRouteError do
+    @moduledoc """
+    Exception raised when no route is found.
+    """
+    defexception plug_status: 404, message: "no route found", conn: nil, router: nil
 
+    def exception(opts) do
+      conn   = Keyword.fetch!(opts, :conn)
+      router = Keyword.fetch!(opts, :router)
+      path   = "/" <> Enum.join(conn.path_info, "/")
+
+      %NoRouteError{message: "no route found for #{conn.method} #{path} (#{inspect router})",
+      conn: conn, router: router}
+    end
+  end
   # Other scopes may use custom stacks.
   # scope "/api", HelloWeb do
   #   pipe_through :api

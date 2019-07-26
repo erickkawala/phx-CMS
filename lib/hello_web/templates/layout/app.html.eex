@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Hello · Phoenix Framework</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+  <style>
+  .block {
+    margin: 0; display:inline-block;
+  }
+  #login_right {
+    margin-right: 10px;
+  }
+  </style>
   </head>
   <body>
     <header>
       <section class="container">
         <nav role="navigation">
-          <nav>
-            <%# <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li> %>
-            <div><span style="margin-right: 7em; font-size: 1.5em;"><%= link "Home", to: Routes.hello_path(@conn, :index) %></span></div>
-          </nav>
+          <ul>
+              <li id="login_right" class="block"><%= link "Home", to: Routes.hello_path(@conn, :index) %></li> 
+              <li class= "block"><%= link "Login", to: Routes.session_path(@conn, :new)%></li>
+          </ul>
         </nav>
         <a href="http://phoenixframework.org/" class="phx-logo">
           <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
@@ -24,7 +32,6 @@
     <main role="main" class="container" style="margin-bottom:10%;">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <div> <%= link "Login", to: Routes.session_path(@conn, :new)%></div>
       <%= render @view_module, @view_template, assigns %>
     
       <h2 style="margin-top:1em";>Pages</h2>

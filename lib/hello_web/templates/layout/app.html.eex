@@ -8,13 +8,18 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   <style>
   .nav_block {
-    margin: 0; display:inline-block;
+    margin: 0; 
+    display:inline-block;
   }
-  #login_right {
+  #login_left {
     margin-right: 10px;
   }
   .link_block {
-
+    display: inline-block;
+  }
+  #user_links {
+    margin-left: 3em;
+    margin-top: 
   }
   </style>
   </head>
@@ -23,7 +28,7 @@
       <section class="container">
         <nav role="navigation">
           <ul>
-              <li class="nav_block" id="login_right"><%= link "Home", to: Routes.hello_path(@conn, :index) %></li> 
+              <li class="nav_block" id="login_left"><%= link "Home", to: Routes.hello_path(@conn, :index) %></li> 
               <li class= "nav_block"><%= link "Login", to: Routes.session_path(@conn, :new)%></li>
           </ul>
         </nav>
@@ -36,15 +41,16 @@
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       <%= render @view_module, @view_template, assigns %>
-    
-      <h2 class="link_block" style="margin-top:1em";>Pages</h2>
+      <div class="link_block">
+        <h2 >Pages</h2>
         <div><span><%= link "CMS Pages Index", to: Routes.cms_page_path(@conn, :index)%></span></div>
         <div><span><%= link "CMS Authors Index", to: Routes.cms_author_path(@conn, :index)%></span></div>
       </div>
-      <h2 class="link_block" style="margin-top:1em;">Users</h2>
+      <div class="link_block" id="user_links">
+        <h2 class="link_block">Users</h2>
         <div><span><%= link "Users Index", to: Routes.user_path(@conn, :index) %></span></div>
+        <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
       </div>
-      <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
     </main>
   </body>
 </html>

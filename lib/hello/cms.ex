@@ -123,8 +123,6 @@ end
     Page.changeset(page, %{})
   end
 
-  alias Hello.CMS.Author
-
   @doc """
   Returns the list of authors.
 
@@ -136,6 +134,7 @@ end
   """
   def list_authors do
     Repo.all(Author)
+    |> Repo.preload(page: [user: :credential])
   end
 
   @doc """

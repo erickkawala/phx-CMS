@@ -1,4 +1,4 @@
-<h1>Listing Users</h1>
+<h1>Users<span style="font-size:.5em; margin-left:3.75em;"><%= link "New User", to: Routes.user_path(@conn, :new) %></span></h1>
 
 <table>
   <thead>
@@ -23,5 +23,3 @@
 <% end %>
   </tbody>
 </table>
-
-<span><%= link "New User", to: Routes.user_path(@conn, :new) %></span>

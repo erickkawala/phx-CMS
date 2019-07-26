@@ -10,6 +10,7 @@ defmodule Hello.CMS.Author do
     field :bio, :string
     field :genre, :string
     field :role, :string
+    field :views, :integer
     
     has_many :pages, Page
     belongs_to :user, Hello.Accounts.User

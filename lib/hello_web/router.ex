@@ -39,6 +39,7 @@ defmodule HelloWeb.Router do
   scope "/cms", HelloWeb.CMS, as: :cms do
       pipe_through [:browser, :authenticate_user]
       resources "/pages", PageController
+      resources "/authors", AuthorController
   end
   defmodule NoRouteError do
     @moduledoc """

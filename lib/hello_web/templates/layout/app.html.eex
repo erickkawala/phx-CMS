@@ -28,6 +28,7 @@
     
       <h2 style="margin-top:1em";>Pages</h2>
         <div><span><%= link "CMS Pages Index", to: Routes.cms_page_path(@conn, :index)%></span></div>
+        <div><span><%= link "CMS Authors Index", to: Routes.cms_author_path(@conn, :index)%></span></div>
       </div>
       <h2 style="margin-top:1em;">Users</h2>
         <div><span><%= link "Users Index", to: Routes.user_path(@conn, :index) %></span></div>

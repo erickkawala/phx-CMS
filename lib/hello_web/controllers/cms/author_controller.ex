@@ -28,7 +28,7 @@ alias Hello.CMS.Page
   end
 
   def show(conn, %{"id" => id}) do
-    page =
+    author =
       id
       |> CMS.get_author!()
       # |> CMS.inc_author_views()

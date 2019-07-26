@@ -1,0 +1,26 @@
+<h1>Pages<span style="font-size:.5em; margin-left:3.75em;"></span></h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Views</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for author <- @authors do %>
+    <tr>
+      <td><%= author.bio %></td>
+      <td><%= author.genre %></td>
+      <td><%= author.role %></td>
+
+      <td>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+

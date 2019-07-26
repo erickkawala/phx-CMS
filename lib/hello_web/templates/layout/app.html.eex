@@ -24,6 +24,7 @@
     <main role="main" class="container" style="margin-bottom:10%;">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <div> <%= link "Login", to: Routes.session_path(@conn, :new)%></div>
       <%= render @view_module, @view_template, assigns %>
     
       <h2 style="margin-top:1em";>Pages</h2>

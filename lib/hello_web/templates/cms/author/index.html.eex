@@ -1,6 +1,6 @@
 <h1>Authors
   <span style="font-size:.5em; margin-left:3.75em;">
-  <%= link "Edit Author", to: Routes.cms_author_path(@conn, :edit) %>
+    <%= link "Edit", to: Routes.cms_author_path(@conn, :edit, Author) %>
   </span>
 </h1>
 <table>

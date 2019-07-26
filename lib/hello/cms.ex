@@ -8,6 +8,7 @@ defmodule Hello.CMS do
   alias Hello.Repo
   alias Hello.CMS.{Page, Author}
   alias Hello.Accounts
+  alias Hello.CMS
 
   @doc """
   Returns the list of pages.
@@ -123,20 +124,19 @@ end
     Page.changeset(page, %{})
   end
 
-  @doc """
-  Returns the list of authors.
+  
+  # Returns the list of authors.
 
   ## Examples
 
-      iex> list_authors()
-      [%Author{}, ...]
-
-  """
+      # iex> list_authors()
+      # [%Author{}, ...]
+  
+  
   def list_authors do
     Repo.all(Hello.CMS.Author)
     # |> Repo.preload(page: [user: :credential])
   end
-
   @doc """
   Gets a single author.
 
@@ -188,7 +188,7 @@ end
 
   """
   def update_author(%Author{} = author, attrs) do
-    author
+    Author
     |> Author.changeset(attrs)
     |> Repo.update()
   end

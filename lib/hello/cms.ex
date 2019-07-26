@@ -134,7 +134,7 @@ end
   """
   def list_authors do
     Repo.all(Author)
-    |> Repo.preload(page: [user: :credential])
+    # |> Repo.preload(page: [user: :credential])
   end
 
   @doc """

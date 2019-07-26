@@ -1,7 +1,7 @@
 defmodule HelloWeb.CMS.AuthorController do
   use HelloWeb, :controller
   
-
+alias Hello.CMS
 alias Hello.CMS.Author
 alias Hello.CMS.Page
 

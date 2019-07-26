@@ -3,6 +3,8 @@ defmodule Hello.CMS.Author do
   import Ecto.Changeset
 
   alias Hello.CMS.Page
+  alias Hello.CMS.Author
+  alias Hello.CMS
 
   schema "authors" do
     field :bio, :string

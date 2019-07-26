@@ -15,4 +15,5 @@ defmodule Hello.Users do
     |> Hello.Accounts.User.changeset(attrs)
     |> Repo.update()
   end
+  
 end

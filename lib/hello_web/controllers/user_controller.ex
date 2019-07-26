@@ -29,6 +29,7 @@ defmodule HelloWeb.UserController do
   def show(conn, %{"id" => id}) do
     user = Accounts.get_user!(id)
     render(conn, "show.html", user: user)
+
   end
 
   def edit(conn, %{"id" => id}) do
@@ -59,4 +60,5 @@ defmodule HelloWeb.UserController do
     |> put_flash(:info, "User deleted successfully.")
     |> redirect(to: Routes.user_path(conn, :index))
   end
+  
 end

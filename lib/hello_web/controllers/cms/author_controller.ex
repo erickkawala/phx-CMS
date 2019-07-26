@@ -36,7 +36,7 @@ alias Hello.CMS.Page
     render(conn, "show.html", author: author)
   end
 
-  def edit(conn) do
+  def edit(conn, %{"id" => id}) do
     # need author.user_id here
     changeset = CMS.change_author(conn.assigns.author)
     render(conn, "edit.html", changeset: changeset)

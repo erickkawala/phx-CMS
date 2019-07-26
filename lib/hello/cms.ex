@@ -132,7 +132,7 @@ end
       # iex> list_authors()
       # [%Author{}, ...]
   
-  
+  # |> Repo.preload(page: [author: :user_id])
   def list_authors do
     Repo.all(Hello.CMS.Author)
     # |> Repo.preload(page: [user: :credential])

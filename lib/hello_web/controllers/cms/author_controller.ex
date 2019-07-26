@@ -47,7 +47,6 @@ alias Hello.CMS.Page
         conn
         |> put_flash(:info, "Author updated successfully.")
         |> redirect(to: Routes.cms_author_path(conn, :show, author))
-
       {:error, %Ecto.Changeset{} = changeset} ->
       render(conn, "edit.html", changeset: changeset)
     end

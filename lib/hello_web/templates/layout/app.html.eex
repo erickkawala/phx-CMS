@@ -7,20 +7,61 @@
     <title>Hello · Phoenix Framework</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    min-height: 300px;
+    min-width: 400px;
+    position: absolute;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 70%;
+    margin: 0;
+  }
   .nav_block {
     margin: 0; 
     display:inline-block;
   }
   #login_left {
-    margin-right: 10px;
-  }
-  .link_block {
-    display: inline-block;
+    margin-right: 1em;
   }
   #user_links {
-    margin-left: 3em;
-    margin-top: 
+    margin-right: 60%;
   }
+  .inline-block {
+    display: inline-block;
+    overflow: none;
+  }
+  .block h2 {
+    width: 3em;
+  }
+  #footer {
+
+    width: 90%;
+  }
+  .class="height-width" {
+    height: 3em;
+    width: 3em;
+  }
+  #footerlink1, #footerlink2, #footerlink3 {
+    height: 10%;
+    width: 10%;
+    margin: 5%;
+    padding-right: 10%;
+    display: inline-block;
+  }
+  #footerlink2 {
+    padding-left: 20%; 
+  }
+  #footerTitle1, #footerTitle2 {
+    height: 15%;
+    width: 15%;
+    margin: 5%;
+    display: inline-block;
+  }
+
   </style>
   </head>
   <body>
@@ -32,25 +73,27 @@
               <li class= "nav_block"><%= link "Login", to: Routes.session_path(@conn, :new)%></li>
           </ul>
         </nav>
-        <a href="http://phoenixframework.org/" class="phx-logo">
+        <!-- <a href="http://phoenixframework.org/" class="phx-logo">
           <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
-        </a>
+        </a> -->
       </section>
     </header>
-    <main role="main" class="container" style="margin-bottom:10%;">
+    <main role="main" class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      
       <%= render @view_module, @view_template, assigns %>
-      <div class="link_block">
-        <h2 >Pages</h2>
-        <div><span><%= link "CMS Pages Index", to: Routes.cms_page_path(@conn, :index)%></span></div>
-        <div><span><%= link "CMS Authors Index", to: Routes.cms_author_path(@conn, :index)%></span></div>
-      </div>
-      <div class="link_block" id="user_links">
-        <h2 class="link_block">Users</h2>
-        <div><span><%= link "Users Index", to: Routes.user_path(@conn, :index) %></span></div>
+      
+      <div id="footerTitle1">
+        <h2>Pages</h2>
+          <div id="footerlink1"><%= link "CMS Pages Index", to: Routes.cms_page_path(@conn, :index)%></div>
+          <div id="footerlink2"><%= link "CMS Authors Index", to: Routes.cms_author_path(@conn, :index)%></div>
+        </div>
+        <div id="footerTitle2">
+          <h2>Users</h2>
+          <div id="footerlink3"><%= link "Users Index", to: Routes.user_path(@conn, :index) %></div>
+        </div>
         <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
-      </div>
     </main>
   </body>
 </html>

@@ -45,7 +45,7 @@ alias Hello.CMS.Page
     case CMS.update_author(conn.assigns.author, author_params) do
       {:ok, author} ->
         conn
-        |> put_flash(:info, "Page updated successfully.")
+        |> put_flash(:info, "Author updated successfully.")
         |> redirect(to: Routes.cms_author_path(conn, :show, author))
 
       {:error, %Ecto.Changeset{} = changeset} ->
@@ -54,7 +54,7 @@ alias Hello.CMS.Page
   end
 
   def delete(conn, _) do
-    {:ok, _page} = CMS.delete_author(conn.assigns.author)
+    {:ok, _author} = CMS.delete_author(conn.assigns.author)
 
     conn
     |> put_flash(:info, "Author deleted successfully.")

@@ -1,0 +1,5 @@
+<h1>Edit Author Info</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.cms_author_path(@conn, :update, @author)) %>
+
+<span><%= link "Authors Index", to: Routes.cms_author_path(@conn, :index) %></span>

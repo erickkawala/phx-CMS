@@ -133,7 +133,6 @@ end
 
   """
   def list_authors do
-    Author
     Repo.all(Hello.CMS.Author)
     # |> Repo.preload(page: [user: :credential])
   end

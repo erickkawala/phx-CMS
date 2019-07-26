@@ -1,0 +1,29 @@
+<h1>Show Page</h1>
+
+<ul>
+  <li>
+    <strong>Title:</strong>
+    <%= @author.bio %>
+  </li>
+
+  <li>
+    <strong>Body:</strong>
+    <%= @author.role %>
+  </li>
+  <li>
+    <strong>Genre:</strong>
+    <%= @author.genre %>
+  </li>
+
+  <li>
+    <strong>Views:</strong>
+    <!-- @page.views -->
+  </li>
+  <li>
+    <strong>Pages:</strong>
+
+  </li>
+</ul>
+
+<!-- <span><%= link "Edit", to: Routes.cms_author_path(@conn, :edit, @page) %></span>-->
+<span><%= link "Back", to: Routes.cms_author_path(@conn, :index) %></span>

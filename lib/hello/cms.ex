@@ -229,4 +229,12 @@ end
 
     put_in(page.views, views)
   end
+
+  def inc_author_views(%Author{} = author) do
+    {1, [%Author{views: views}]} =
+      from(a in Author, where: a.id == ^author.id, select: [:views])
+      |> Repo.update_all(inc: [views: 1])
+
+    put_in(page.views, views)
+  end
 end

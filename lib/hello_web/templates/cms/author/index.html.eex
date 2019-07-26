@@ -6,10 +6,9 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Views</th>
-
+      <th>Bio</th>
+      <th>Genre</th>
+      <th>Role</th>
       <th></th>
     </tr>
   </thead>

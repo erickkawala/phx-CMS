@@ -8,6 +8,7 @@ defmodule Hello.Accounts.User do
     field :name, :string
     field :username, :string
     has_one :credential, Credential
+    has_one :author, Hello.CMS.Author
     timestamps()
   end
 

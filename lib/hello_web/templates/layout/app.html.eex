@@ -38,21 +38,19 @@
     width: 3em;
   }
   #footer {
-
     width: 90%;
   }
-  .class="height-width" {
-    height: 3em;
-    width: 3em;
-  }
-  #footerlink1, #footerlink2, #footerlink3 {
+  #footerLink1, #footerLink2, #footerlink3 {
     height: 10%;
     width: 10%;
     margin: 5%;
     padding-right: 10%;
     display: inline-block;
   }
-  #footerlink2 {
+  #footerLink1 {
+    margin-left: -17%; 
+  }
+  #footerLink2 {
     padding-left: 20%; 
   }
   #footerTitle1, #footerTitle2 {
@@ -61,7 +59,18 @@
     margin: 5%;
     display: inline-block;
   }
-
+  #footerTitle2 {
+    margin-left: 0%;
+  }
+  #linkBuffer {
+    margin-left:1em;
+  }
+  #link1_h2 {
+    margin-left: 4%;
+  }
+  #link2_h2 {
+    margin-left: -4%;
+  }
   </style>
   </head>
   <body>
@@ -69,8 +78,10 @@
       <section class="container">
         <nav role="navigation">
           <ul>
-              <li class="nav_block" id="login_left"><%= link "Home", to: Routes.hello_path(@conn, :index) %></li> 
-              <li class= "nav_block"><%= link "Login", to: Routes.session_path(@conn, :new)%></li>
+              <li class="nav_block" id="login_left"><%= link "Home", to: Routes.hello_path(@conn, :index) %>
+              </li> 
+              <li class= "nav_block"><%= link "Login", to: Routes.session_path(@conn, :new)%>
+              </li>
           </ul>
         </nav>
         <!-- <a href="http://phoenixframework.org/" class="phx-logo">
@@ -85,13 +96,17 @@
       <%= render @view_module, @view_template, assigns %>
       
       <div id="footerTitle1">
-        <h2>Pages</h2>
-          <div id="footerlink1"><%= link "CMS Pages Index", to: Routes.cms_page_path(@conn, :index)%></div>
-          <div id="footerlink2"><%= link "CMS Authors Index", to: Routes.cms_author_path(@conn, :index)%></div>
+        <h2 id="link1_h2">Pages</h2>
+          <div id="footerLink1"><%= link "Pages", to: Routes.cms_page_path(@conn, :index)%>
+          </div>
+          <span id="linkBuffer"></span>
+          <div id="footerLink2"><%= link "Authors", to: Routes.cms_author_path(@conn, :index)%>
+          </div>
         </div>
         <div id="footerTitle2">
-          <h2>Users</h2>
-          <div id="footerlink3"><%= link "Users Index", to: Routes.user_path(@conn, :index) %></div>
+          <h2 id="link2_h2">Users</h2>
+          <div id="footerlink3"><%= link "Users", to: Routes.user_path(@conn, :index) %>
+          </div>
         </div>
         <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
     </main>

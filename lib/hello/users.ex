@@ -11,8 +11,6 @@ defmodule Hello.Users do
 
   # def get_by_comment(user_id), do: Repo.get_by(User, comment: comment)
   
-
-  
   def update_user(user, attrs) do
     user
     |> Hello.Accounts.User.changeset(attrs)

@@ -4,8 +4,9 @@ defmodule Hello.Accounts.Credential do
 
   schema "credentials" do
     field :email, :string
-    belongs_to :user, User # INVALID ASSOC!?
+    belongs_to :user, User #invalid association
     # field :password_hash, :string
+    #todo: salt
 
     timestamps()
   end

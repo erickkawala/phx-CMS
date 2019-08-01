@@ -1,9 +1,14 @@
-/_build
+/hello/_build
 /deps
-/doc
+/hello/doc
+/hello/tmp
 /tmp
-/assets/node_modules
+/hello/assets/node_modules
+/hello/deps
+/hello/node_modules
+/hello/assets
+/hello/erl_crash.dump
+/assets
+/_build
+/doc
 
-/node_modules
-
-/erl_crash.dump

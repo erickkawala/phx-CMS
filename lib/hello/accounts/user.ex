@@ -3,12 +3,16 @@ defmodule Hello.Accounts.User do
   import Ecto.Changeset
 
   alias Hello.Accounts.Credential
+  alias Hello.CMS.Author
 
   schema "users" do
     field :name, :string
     field :username, :string
+    field :birth_year, :integer
+    field :birth_month, :integer
+    field :birth_day, :integer
     has_one :credential, Credential
-    has_one :author, Hello.CMS.Author
+    has_one :author, Author, foreign_key: :author_id
     timestamps()
   end
 

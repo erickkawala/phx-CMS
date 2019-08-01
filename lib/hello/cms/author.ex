@@ -3,17 +3,19 @@ defmodule Hello.CMS.Author do
   import Ecto.Changeset
 
   alias Hello.CMS.Page
-  alias Hello.CMS.Author
-  alias Hello.CMS
+  alias Hello.Accounts.User
+  # alias Hello.CMS.Author
+  # alias Hello.CMS
 
   schema "authors" do
     field :bio, :string
     field :genre, :string
     field :role, :string
     field :views, :integer
+    field :author_id, :integer
     
     has_many :pages, Page
-    belongs_to :user, Hello.Accounts.User
+    belongs_to :user, User, foreign_key: :user_id
 
     timestamps()
   end

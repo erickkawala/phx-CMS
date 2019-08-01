@@ -18,3 +18,9 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+## Scaling
+
+  * Index buckets to test go in hello/lib/users.ex to separate queries (horizontal)
+  * When working with either workload query optimization is very important. One optimization technique is avoiding the use of SELECT * instead, you should list all columns. Loops and correlated sub-queries slow down performance so they need to be used judiciously.
+  * https://sisense.com/blog/two-approaches-scalable-database-design/

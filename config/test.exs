@@ -16,3 +16,10 @@ config :hello, HelloWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# config bcrypt for testing
+# Optional: during tests (and tests only), 
+# you may want to reduce the number of rounds 
+# so it does not slow down your test suite. 
+# If you have a config/test.exs, you should add:
+config :bcrypt_elixir, :log_rounds, 4

@@ -8,3 +8,7 @@
 /hello/node_modules
 /hello/assets
 /hello/erl_crash.dump
+/assets
+/_build
+/doc
+

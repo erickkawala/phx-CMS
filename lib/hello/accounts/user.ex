@@ -17,7 +17,7 @@ defmodule Hello.Accounts.User do
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:name, :username])
-    |> validate_required([:name, :username])
+    |> validate_required([:name, :username, :password_hash])
     |> unique_constraint(:username)
   end
 end

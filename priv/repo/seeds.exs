@@ -9,3 +9,8 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+#  https://phoenixframework.org/blog/seeding-data
+
+alias Linker.Repo
+alias Linker.Link

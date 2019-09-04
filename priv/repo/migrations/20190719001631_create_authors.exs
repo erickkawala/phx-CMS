@@ -8,7 +8,10 @@ defmodule Hello.Repo.Migrations.CreateAuthors do
       add :genre, :string
       add :user_id, references(:users, on_delete: :delete_all),
                     null: false
-
+      add :views, :integer, default: 0
+      add :user_id, references(:users, on_delete: :delete_all),
+                      null: false
+      add :pen_name, :string
       timestamps()
     end
 

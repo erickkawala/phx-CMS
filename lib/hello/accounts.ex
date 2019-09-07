@@ -204,7 +204,7 @@ defmodule Hello.Accounts do
     Credential.changeset(credential, %{})
   end
 
-  def authenticate_by_email_password(email, _password) do
+  def authenticate_by_email_password(email, password_digest) do
     query =
       from u in User,
         inner_join: c in assoc(u, :credential),

@@ -6,8 +6,6 @@ defmodule Hello.Repo.Migrations.CreateAuthors do
       add :bio, :text
       add :role, :string
       add :genre, :string
-      add :user_id, references(:users, on_delete: :delete_all),
-                    null: false
       add :views, :integer, default: 0
       add :user_id, references(:users, on_delete: :delete_all),
                       null: false

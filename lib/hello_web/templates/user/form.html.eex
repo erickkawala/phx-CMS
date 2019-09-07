@@ -13,14 +13,32 @@
   <%= text_input f, :username %>
   <%= error_tag f, :username %>
 
+  <%= label f, :birth_day %>
+  <%= text_input f, :birth_day %>
+  <%= error_tag f, :birth_day %>
+
+  <%= label f, :birth_month %>
+  <%= text_input f, :birth_month %>
+  <%= error_tag f, :birth_month %>
+  
+  <%= label f, :birth_year %>
+  <%= text_input f, :birth_year %>
+  <%= error_tag f, :birth_year %>
+
   <div class="form-group">
     <%= inputs_for f, :credential, fn cf -> %>
       <%= label cf, :email %>
       <%= text_input cf, :email %>
       <%= error_tag cf, :email %>
     <% end %>
+
+    <%= inputs_for f, :credential, fn cf -> %>
+      <%= label cf, "password" %>
+      <%= text_input cf, :password_digest %>
+      <%= error_tag cf, :password_digest %>
+    <% end %>
   </div>
-  
+
   <div>
     <%= submit "Save" %>
   </div>

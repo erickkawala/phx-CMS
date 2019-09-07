@@ -4,8 +4,8 @@ defmodule Hello.Accounts.Credential do
 
   schema "credentials" do
     field :email, :string
-    belongs_to :user, User #invalid association
-    # field :password_hash, :string
+    belongs_to :user, User
+    field :password_digest, :string
     #todo: salt
 
     timestamps()
@@ -15,7 +15,7 @@ defmodule Hello.Accounts.Credential do
   def changeset(credential, attrs) do
     credential
     |> cast(attrs, [:email])
-    |> validate_required([:email])
+    |> validate_required([:email])#, :password_digest
     |> unique_constraint(:email)
   end
 end

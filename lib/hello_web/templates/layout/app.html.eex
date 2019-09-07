@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Hello · Phoenix Framework</title>
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <link rel="stylesheet" href='<%= Routes.static_path(@conn, "/css/app.css") %>'/>
   <style>
   * {
     margin: 0;
@@ -81,6 +81,7 @@
               <li class="nav_block" id="home_nav"><%= link "Home", to: Routes.hello_path(@conn, :index) %>
               </li> 
               <li class= "nav_block"><%= link "Login", to: Routes.session_path(@conn, :new)%></li>
+              <li class= "nav_block"><%= link "Register", to: Routes.user_path(@conn, :new)%></li>
           </ul>
         </nav>
         <!-- <a href="http://phoenixframework.org/" class="phx-logo">
@@ -103,8 +104,8 @@
           </div>
         </div>
         <div id="footerTitle2">
-          <h2 id="link2_h2">Users</h2>
-          <div id="footerlink3"><%= link "Users", to: Routes.user_path(@conn, :index) %>
+          <h2 id="link2_h2">Account</h2>
+          <div id="footerlink3">
           </div>
         </div>
         <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>

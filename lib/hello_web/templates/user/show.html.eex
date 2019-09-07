@@ -15,6 +15,17 @@
     <strong>Email:</strong>
     <%= @user.credential.email %>
   </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%#= @user.credential.password_digest %>
+  </li>
+  <li>
+    <strong>Birthday:</strong>
+    Year: <%= @user.birth_year %>
+    Month: <%= @user.birth_month %>
+    Day: <%= @user.birth_day %>
+  </li>
 </ul>
 
 <span><%= link "Edit", to: Routes.user_path(@conn, :edit, @user) %></span>

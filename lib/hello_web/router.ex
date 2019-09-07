@@ -15,19 +15,18 @@ defmodule HelloWeb.Router do
 
   scope "/", HelloWeb do
     pipe_through :browser
-
     
     resources "/sessions", SessionController, only: [:new, :create, :delete],
                                               singleton: true
     
     get "/", HelloController, :index
     get "/hello/:messenger", HelloController, :show
-    
+    resources "/users", UserController, only: [:new, :create, :index]
   end
 
   scope "/", HelloWeb do
     pipe_through [:browser, :authenticate_user]
-    resources "/users", UserController
+    resources "/users", UserController, only: [:show, :delete]
   end
 
   defp authenticate_user(conn, _) do
